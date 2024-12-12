@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+
+{% block conteudo %}
+        {% for item in lista_de_animais %}
+
+            <div class="p1">
+                <p>idAnimal: {{item.idAnimal}}<br>
+                <p>nome_animal: {{item.nome_animal}}<br>
+                <p>raca1: {{item.raca1}}</p><br>
+                <p>anoNasci1: {{item.anoNasci1}}</p><br>
+                <p>idCliente1: {{item.idCliente1}}</p>
+
+            </div>
+
+        {% endfor %}
+
+{% endblock conteudo %}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <Link rel="stylesheet" href="/static/estrutura.css">
+</head>
+<body>
+<div class="container">
+
+    <header>
+        <p>Clínica Veterinaria</p>
+    </header>
+
+    <nav>
+        <p>MENU</p>
+        <br>
+        <ul>
+            <li><a href="{{ url_for('nova_consulta') }}">Cadastro de consultas</a></li>
+            <li><a href="{{ url_for('lista_consultas') }}">Lista de Consultas</a></li><hr>
+            <li><a href="{{ url_for('novo_cliente') }}">Cadastro de Clientes</a></li>
+            <li><a href="{{ url_for('lista_clientes') }}">Lista de Clientes</a></li><hr>
+            <li><a href="{{ url_for('novo_animal') }}">Cadastro de Animais</a></li>
+            <li><a href="{{ url_for('lista_animais') }}">Lista de Animais</a></li>
+
+
+        </ul>
+    </nav>
+
+    <main>
+
+        {% block conteudo %}
+
+        {% endblock conteudo %}
+
+    </main>
+
+</div>
+</body>
+</html>

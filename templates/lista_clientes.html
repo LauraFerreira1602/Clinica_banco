@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+
+{% block conteudo %}
+        {% for item in lista_de_clientes %}
+
+            <div class="p2">
+                <p>id_cliente: {{item.id_cliente}}<br>
+                <p>Nome1: {{item.Nome1}}<br>
+                <p>CPF: {{item.CPF}}</p><br>
+                <p>telefone: {{item.telefone}}</p>
+
+            </div>
+
+        {% endfor %}
+
+{% endblock conteudo %}

@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block conteudo %}
+
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <div class="flash-error">
+                {% for message in messages %}
+                    {{ message }}
+                {% endfor %}
+            </div>
+        {% endif %}
+    {% endwith %}
+
+    <form action="{{url_for('nova_consulta')}}" method="POST">
+        <label> Data:</label>
+        <input type="text" name="form_data1">
+        <label> Hora:</label>
+        <input type="number" name="form_hora1">
+        <label> Minuto:</label>
+        <input type="number" name="form_minuto">
+        <label> Motivo ID:</label>
+        <input type="number" name="form_motivo_id1">
+        <button>Adicionar</button>
+        <button><p href ="{{url_for('lista_consultas')}}">Cancelar</p></button>
+    </form>
+
+{% endblock conteudo %}
